@@ -21,7 +21,7 @@ services:
     environment:
       - PROXY_REMOTE_URL=https://gcr.io
   caddy:
-      image: 2.3.0-alpine
+      image: caddy:2.3.0-alpine
       volumes:
       - ./config/caddy/Caddyfile:/etc/caddy/Caddyfile
       ports:
