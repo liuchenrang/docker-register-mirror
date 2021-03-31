@@ -26,6 +26,7 @@ services:
       - ./config/caddy/Caddyfile:/etc/caddy/Caddyfile
       ports:
       - "443:443"
+      - "9998:9998"
      
   source:
       image: alpine
