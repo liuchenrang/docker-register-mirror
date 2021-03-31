@@ -8,11 +8,6 @@ services:
   #   - "8080:8080"
   #   volumes_from:
   #     - source    
-  web-tool:
-      image:  banzzaj/alpine-docker-curl:latest
-      # entrypoint: ["/bin/sh", "while true; do sleep 5; done;"]
-      entrypoint: ["/bin/sh", "ls /bin/"]
-  registry-default:
     ports:
       - 5010:5000
     image: yangchuansheng/registry-proxy:latest
