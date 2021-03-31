@@ -8,6 +8,8 @@ services:
   #   - "8080:8080"
   #   volumes_from:
   #     - source    
+  web-tool:
+      image:  banzzaj/alpine-docker-curl
   registry-default:
     ports:
       - 5010:5000
