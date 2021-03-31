@@ -9,7 +9,7 @@ services:
   #   volumes_from:
   #     - source    
   web-tool:
-      image:  banzzaj/alpine-docker-curl
+      image:  banzzaj/alpine-docker-curl:latest
   registry-default:
     ports:
       - 5010:5000
