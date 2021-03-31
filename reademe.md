@@ -1,0 +1,1 @@
+docker run --rm --network dockerregistermirror_default banzzaj/alpine-docker-curl curl 172.18.0.5:5000/v2/
