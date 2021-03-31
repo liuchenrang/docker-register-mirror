@@ -1,0 +1,39 @@
+version: '2.2'
+services:
+  web:
+    image: nginx:1.15.3
+    volumes:
+    - ./config/nginx/:/etc/nginx/
+    ports:
+    - "80:80"
+    depends_on:
+        - "php5"
+    links:
+        - "php5"
+    volumes_from:
+      - source    
+  registry-default:
+    ports:
+      - 5010:5000
+    image: yangchuansheng/registry-proxy:latest
+    environment:
+      - PROXY_REMOTE_URL=https://registry-1.docker.io
+  registry-gcr:
+    ports:
+      - 5020:5000
+    image: yangchuansheng/registry-proxy:latest
+    environment:
+      - PROXY_REMOTE_URL=https://gcr.io
+  caddy:
+      image: 2.3.0-alpine
+      volumes:
+      - ./config/caddy/Caddyfile:/etc/caddy/Caddyfile
+      ports:
+      - "443:443"
+     
+  source:
+      image: alpine
+      volumes:
+        - ./config:/tmp/config
+       
+

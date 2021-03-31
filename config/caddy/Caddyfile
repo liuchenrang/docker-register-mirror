@@ -1,0 +1,14 @@
+{
+        http_port 9998
+}
+
+docker.registry.phpyiqiwan.co:443 {
+   reverse_proxy localhost:5010 {
+         # header_up Host www.sitemap-xml.cn
+   }
+}
+gcr.registry.phpyiqiwan.com:443 {
+        reverse_proxy localhost:5020 {
+          # header_up Host registry-1.docker.io
+        }
+}
