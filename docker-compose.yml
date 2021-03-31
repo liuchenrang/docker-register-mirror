@@ -6,10 +6,6 @@ services:
     - ./config/nginx/:/etc/nginx/
     ports:
     - "80:80"
-    depends_on:
-        - "php5"
-    links:
-        - "php5"
     volumes_from:
       - source    
   registry-default:
