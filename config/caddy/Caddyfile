@@ -3,12 +3,12 @@
 }
 
 default.docker.mirror.devops.haosheng.cn:443 {
-   reverse_proxy localhost:5010 {
+   reverse_proxy registry-default:5010 {
          # header_up Host www.sitemap-xml.cn
    }
 }
 gcr.docker.mirror.devops.haosheng.cn:443 {
-        reverse_proxy localhost:5020 {
+        reverse_proxy registry-gcr:5020 {
           # header_up Host registry-1.docker.io
         }
 }
