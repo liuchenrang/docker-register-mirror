@@ -24,6 +24,8 @@ services:
       image: caddy:2.3.0-alpine
       volumes:
       - ./config/caddy/Caddyfile:/etc/caddy/Caddyfile
+      - ./config/caddy/:/config/caddy/
+      - ./config/ssl/caddy/:/data/caddy/
       ports:
       - "443:443"
       - "9998:9998"
