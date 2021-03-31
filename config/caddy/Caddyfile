@@ -3,11 +3,11 @@
 }
 
 default.docker.mirror.devops.haosheng.cn:443 {
-   reverse_proxy registry-default:5010 {
+   reverse_proxy registry-default:5000 {
    }
 }
 gcr.docker.mirror.devops.haosheng.cn:443 {
-        reverse_proxy registry-gcr:5020 {
+        reverse_proxy registry-gcr:5000 {
           # header_up Host registry-1.docker.io
         }
 }
