@@ -13,12 +13,16 @@ services:
       - 5010:5000
     image: yangchuansheng/registry-proxy:latest
     environment:
+      - PROXY_USERNAME=duoduo
+      - PROXY_PASSWORD=123456
       - PROXY_REMOTE_URL=https://registry-1.docker.io
   registry-gcr:
     ports:
       - 5020:5000
     image: yangchuansheng/registry-proxy:latest
     environment:
+      - PROXY_USERNAME=duoduo
+      - PROXY_PASSWORD=123456
       - PROXY_REMOTE_URL=https://gcr.io
   caddy:
       image: caddy:2.3.0-alpine
