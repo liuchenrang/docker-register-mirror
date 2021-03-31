@@ -11,7 +11,7 @@ services:
   web-tool:
       image:  banzzaj/alpine-docker-curl:latest
       command:
-        - pause
+        - while true; do sleep 5; done; 
   registry-default:
     ports:
       - 5010:5000
