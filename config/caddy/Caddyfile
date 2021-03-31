@@ -4,7 +4,6 @@
 
 default.docker.mirror.devops.haosheng.cn:443 {
    reverse_proxy registry-default:5010 {
-         # header_up Host www.sitemap-xml.cn
    }
 }
 gcr.docker.mirror.devops.haosheng.cn:443 {
