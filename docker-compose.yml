@@ -10,8 +10,8 @@ services:
   #     - source    
   web-tool:
       image:  banzzaj/alpine-docker-curl:latest
-      command:
-        - while true; do sleep 5; done; 
+      # entrypoint: ["/bin/sh", "while true; do sleep 5; done;"]
+      entrypoint: ["/bin/sh", "ls /bin/"]
   registry-default:
     ports:
       - 5010:5000
@@ -38,7 +38,9 @@ services:
       - "443:443"
       - "80:80"
       - "9998:9998"
-     
+      links:
+        - "registry-gcr"
+        - "registry-default"
   source:
       image: alpine
       volumes:
