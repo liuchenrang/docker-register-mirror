@@ -17,8 +17,8 @@ services:
   registry-gcr:
     image: yangchuansheng/registry-proxy:latest
     environment:
-      - PROXY_USERNAME=duoduo
-      - PROXY_PASSWORD=123456
+      # - PROXY_USERNAME=duoduo
+      # - PROXY_PASSWORD=123456
       - PROXY_REMOTE_URL=https://gcr.io
   # registry-k8s:
   #   image: yangchuansheng/registry-proxy:latest
