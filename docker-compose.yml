@@ -8,36 +8,26 @@ services:
   #   - "8080:8080"
   #   volumes_from:
   #     - source    
-  # registry-default:
-  #   image: yangchuansheng/registry-proxy:latest
-  #   environment:
-  #     - PROXY_USERNAME=duoduo
-  #     - PROXY_PASSWORD=123456
-  #     - PROXY_REMOTE_URL=https://registry-1.docker.io
+  registry-default:
+    image: yangchuansheng/registry-proxy:latest
+    environment:
+      - PROXY_REMOTE_URL=https://registry-1.docker.io
   registry-gcr:
     image: yangchuansheng/registry-proxy:latest
     environment:
-      # - PROXY_USERNAME=duoduo
-      # - PROXY_PASSWORD=123456
       - PROXY_REMOTE_URL=https://gcr.io
-  # registry-k8s:
-  #   image: yangchuansheng/registry-proxy:latest
-  #   environment:
-  #     - PROXY_USERNAME=duoduo
-  #     - PROXY_PASSWORD=123456
-  #     - PROXY_REMOTE_URL=https://k8s.gcr.io
-  # registry-quay:
-  #   image: yangchuansheng/registry-proxy:latest
-  #   environment:
-  #     - PROXY_USERNAME=duoduo
-  #     - PROXY_PASSWORD=123456
-  #     - PROXY_REMOTE_URL=https://quay.io  
-  # registry-ghcr:
-  #   image: yangchuansheng/registry-proxy:latest
-  #   environment:
-  #     - PROXY_USERNAME=duoduo
-  #     - PROXY_PASSWORD=123456
-  #     - PROXY_REMOTE_URL=https://ghcr.io  
+  registry-k8s:
+    image: yangchuansheng/registry-proxy:latest
+    environment:
+      - PROXY_REMOTE_URL=https://k8s.gcr.io
+  registry-quay:
+    image: yangchuansheng/registry-proxy:latest
+    environment:
+      - PROXY_REMOTE_URL=https://quay.io  
+  registry-ghcr:
+    image: yangchuansheng/registry-proxy:latest
+    environment:
+      - PROXY_REMOTE_URL=https://ghcr.io  
   caddy:
       image: caddy:2.3.0-alpine
       volumes:
