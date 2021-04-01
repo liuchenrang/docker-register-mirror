@@ -2,27 +2,28 @@
         http_port 80
 }
 
-default.docker.mirror.devops.haosheng.cn:443 {
-   reverse_proxy registry-default:5000 {
-   }
-}
+# default.docker.mirror.devops.haosheng.cn:443 {
+#    reverse_proxy registry-default:5000 {
+#    }
+# }
 gcr.docker.mirror.devops.haosheng.cn:443 {
     reverse_proxy registry-gcr:5000 {
         
     }
 }
-k8s.docker.mirror.devops.haosheng.cn:443 {
-    reverse_proxy registry-k8s:5000 {
+# k8s.docker.mirror.devops.haosheng.cn:443 {
+#     reverse_proxy registry-k8s:5000 {
         
-    }
-}
-quay.docker.mirror.devops.haosheng.cn:443 {
-    reverse_proxy registry-quay:5000 {
+#     }
+# }
+# quay.docker.mirror.devops.haosheng.cn:443 {
+#     reverse_proxy registry-quay:5000 {
         
-    }
-}
-ghcr.docker.mirror.devops.haosheng.cn:443 {
-    reverse_proxy registry-ghcr:5000 {
+#     }
+# }
+# ghcr.docker.mirror.devops.haosheng.cn:443 {
+#     reverse_proxy registry-ghcr:5000 {
         
-    }
-}
+#     }
+# }
+# gcr.io/knative-releases/knative.dev/net-http01/cmd/controller
